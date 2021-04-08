@@ -1,0 +1,144 @@
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pomodoro: rgb(219 82 77);
+  --shortBreak: rgb(70 142 145);
+  --longBreak: rgb(67 126 168);
+}
+
+body {
+  background-color: var(--pomodoro);
+  transition: background-color 1s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  user-select: none;
+}
+
+progress {
+  border-radius: 0.2rem;
+  width: 100%;
+  height: 1.2rem;
+  position: fixed;
+  top: 0;
+}
+
+progress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+progress::-webkit-progress-value {
+  background-color: #fff;
+}
+
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  text-align: center;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.mode {
+  margin-top: 3rem;
+  margin-bottom: 0%;
+  text-transform: capitalize;
+}
+.clock {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 10rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: arial, sans-serif;
+}
+
+.mode-button {
+  font-size: 16px;
+  height: 28px;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 400;
+  color: #fff;
+  border: 1px solid transparent;
+  margin: 0px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  background: none;
+}
+
+.mode-button.active {
+  border-color: #fff;
+}
+
+.fa-refresh:before {
+  content: "\f021";
+  text-align: center;
+  font-size: 2.4rem;
+  outline: none;
+}
+
+.fa {
+  cursor: pointer;
+  box-shadow: rgb(235, 235, 235) 0px 3px 0px;
+  padding: 0.5rem 0.5rem;
+  background-color: none;
+}
+
+.main-button {
+  cursor: pointer;
+  box-shadow: rgb(235, 235, 235) 0px 3px 0px;
+  font-size: 22px;
+  height: 55px;
+  text-transform: uppercase;
+  color: var(--pomodoro);
+  font-weight: bold;
+  width: 200px;
+  background-color: white;
+  border-width: initial;
+  border-style: none;
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 4px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+.main-button.active {
+  transform: translateY(6px);
+  box-shadow: none;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .clock {
+    font-size: 8rem;
+  }
+}

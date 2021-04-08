@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Random Quote Machine</title>
+</head>
+
+<body>
+  <div class="quote-box" id="quote-box">
+    <h3>Random Quote Machine</h3>
+    <div class="quote-text">
+      <i class="fa fa-quote-left">
+      </i><span id="text">//Quote goes here</span>
+      <div class="quote-author">
+        <span id="author">//Author</span>
+      </div>
+    </div>
+    <div id="js-spinner" class="spinner hidden">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+    <div class="buttons">
+      <button class="tweet-quote tweet-quote-btn">
+        <a id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-twitter" aria-hidden="true"> Tweet it!</i>
+        </a>
+      </button>
+      <button id="new-quote" class="new-quote-btn">Get New quote</button>
+    </div>
+  </div>
+  <div class="footer">
+    <a href="https://codepen.io/gisioraelvis/"> By Gisiora Elvis</a>
+  </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
