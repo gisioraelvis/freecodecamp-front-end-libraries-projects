@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+pre,
+code {
+  background-color: #dddddd;
+}
+pre {
+  padding: 10px;
+  border-left: 3px solid #bbbbbb;
+}
+code {
+  padding: 3px;
+  line-height: 21px;
+}
+blockquote {
+  border-left: 3px solid #bbbbbb;
+  padding: 10px;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+.header {
+  font-family: "Roboto";
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem;
+}
+
+.previewer {
+  display: flex;
+  flex-flow:column wrap;
+  align-items: center;
+  height: 100%;
+  overflow-y: scrol;
+}
+
+#editor {
+  width: 70vw;
+  height: 500px;
+  min-height: 200px;
+  margin-bottom: 15px;
+  resize: vertical;
+  outline: none;
+  padding: 5px;
+  font-size: 12px;
+}
+
+#preview {
+  width: 90vw;
+  height: 700px;
+  padding: 20px;
+  margin: 20px;
+  border: none;
+  overflow-y: scroll;
+  background-color: lavender;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 2rem;
+  }
+  .previewer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  textarea,
+  .output {
+    width: 90%;
+    height: auto;
+    margin: 5px auto;
+    overflow: scroll;
+  }
+}
