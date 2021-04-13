@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Drum Machine</title>
+</head>
+
+<body>
+  <div class="drum-container" id="drum-machine">
+    <h1>A Drum Machine</h1>
+    <div>
+      <div>
+        <div id="display">Click a button to play!</div>
+      </div>
+    </div>
+    <div>
+      <button class="drum-pad btn" id="drum-0" onclick="play('Q')">
+        Q
+        <audio src="./beats/Q.mp3" class="clip" id="Q">
+      </button>
+      <button class="drum-pad btn" id="drum-1" onclick="play('W')">
+        W
+        <audio src="./beats/W.mp3" class="clip" id="W">
+      </button>
+      <button class="drum-pad btn" id="drum-2" onclick="play('E')">
+        E
+        <audio src="./beats/E.mp3" class="clip" id="E">
+      </button>
+    </div>
+    <br>
+
+    <div>
+      <button class="drum-pad btn" id="drum-3" onclick="play('A')">
+        A
+        <audio src="./beats/A.mp3" class="clip" id="A">
+      </button>
+      <button class="drum-pad btn col-3 btn-danger" id="drum-4" onclick="play('S')">
+        S
+        <audio src="./beats/S.mp3" class="clip" id="S">
+      </button>
+      <button class="drum-pad btn" id="drum-5" onclick="play('D')">
+        D
+        <audio src="./beats/D.mp3" class="clip" id="D">
+      </button>
+    </div>
+    <br>
+
+    <div>
+      <button class="drum-pad btn" id="drum-6" onclick="play('Z')">
+        Z
+        <audio src="./beats/Z.mp3" class="clip" id="Z">
+      </button>
+      <button class="drum-pad btn" id="drum-7" onclick="play('X')">
+        X
+        <audio src="./beats/X.mp3" class="clip" id="X">
+      </button>
+      <button class="drum-pad btn" id="drum-8" onclick="play('C')">
+        C
+        <audio src="./beats/C.mp3" class="clip" id="C">
+      </button>
+    </div>
+  </div>
+  <br>
+  
+  <di>
+    <div class="range-container">
+      <input type="range" id="range" min="0" max="100">
+      <label for="range">50</label>
+    </div>
+  </di>
+  <script src="script.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
